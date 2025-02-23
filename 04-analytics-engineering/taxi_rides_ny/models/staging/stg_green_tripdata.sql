@@ -9,7 +9,7 @@ with tripdata as
   select *,
     row_number() over(partition by vendorid, lpep_pickup_datetime) as rn
   from {{ source('staging','green_tripdata') }}
-  where vendorid is not null 
+  where vendorid is not null and (filename like '%2019%' or filename like '%2020%')
 )
 select
     -- identifiers
