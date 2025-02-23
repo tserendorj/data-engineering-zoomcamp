@@ -1,7 +1,11 @@
 version: 2
 
 models:
-  - name: fact_fhv_trips.sql
+  - name: fct_taxi_trips_quarterly_revenue
+    description: >
+      quarterly table for taxi
+
+  - name: fact_fhv_trips
     description: >
       fact table for fhv
 
