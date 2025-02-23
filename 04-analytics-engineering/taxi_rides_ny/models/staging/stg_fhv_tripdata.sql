@@ -11,8 +11,7 @@ with tripdata as
 )
 select
 
-    {{ dbt.safe_cast("dispatching_base_num", api.Column.translate_type("string")) }} as dispatching_base_num,
-    
+    dispatching_base_num    
     cast(pickup_datetime as timestamp) as pickup_datetime,
     cast(dropoff_datetime as timestamp) as dropoff_datetime,
     
@@ -20,8 +19,7 @@ select
     {{ dbt.safe_cast("dolocationid", api.Column.translate_type("integer")) }} as dropoff_locationid,
 
     
-    {{ dbt.safe_cast("sr_flag", api.Column.translate_type("string")) }} as passenger_count,
-    {{ dbt.safe_cast("affilated_base_number", api.Column.translate_type("string")) }} as passenger_count,
+    sr_flag
     
 from tripdata
 
