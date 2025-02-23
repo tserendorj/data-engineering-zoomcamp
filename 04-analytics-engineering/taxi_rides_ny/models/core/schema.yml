@@ -1,9 +1,7 @@
 version: 2
 
 models:
-  - name: fct_taxi_trips_quarterly_revenue
-    description: >
-      quarterly table for taxi
+  
 
   - name: fact_fhv_trips
     description: >
@@ -25,7 +23,14 @@ models:
         tests:
             - not_null:
                 severity: error
-      
+  - name: fct_taxi_trips_quarterly_revenue
+    description: >
+      quarterly table for taxi
+
+  - name: fct_taxi_trips_monthly_fare_p95
+    description: >
+      fare
+
   - name: fact_trips
     description: >
       Taxi trips corresponding to both service zones (Green and yellow).
